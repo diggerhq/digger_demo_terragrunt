@@ -35,6 +35,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      - name: Setup Terragrunt
+        uses: autero1/action-terragrunt@v1.1.0
+        with:
+          terragrunt_version: 0.21.13
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+
       - name: digger tfrun
         uses: diggerhq/tfrun@main
         env:
