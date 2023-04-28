@@ -1,7 +1,5 @@
 projects:
 - name: dev
-  branch: /main/
   dir: .
   workspace: default
   terragrunt: true
-  terraform_version: v0.11.0
