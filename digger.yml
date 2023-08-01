@@ -3,3 +3,9 @@ projects:
   dir: .
   workspace: default
   terragrunt: true
+
+workflows:
+  default:
+    steps:
+      - plan: terragrunt run-all plan
+      - apply: terragrunt run-all apply
