@@ -7,5 +7,5 @@ projects:
 workflows:
   default:
     steps:
-      - plan: terragrunt run-all plan
+      - plan: terragrunt run-all plan --terragrunt-log-level debug --terragrunt-debug
       - apply: terragrunt run-all apply
